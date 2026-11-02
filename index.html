@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVApp Pro — by Alejandro Montes</title>
+    <meta
+      name="description"
+      content="CVApp Pro by Alejandro Montes. Crea tu currículum, previsualízalo en PDF y descubre vacantes afines a tu perfil."
+    />
+    <meta name="theme-color" content="#141414" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+  </head>
+  <body class="vista-login">
+    <!-- Login: panel tinta | papel -->
+    <section id="pantalla-login" class="login-screen" aria-label="Inicio de sesión">
+      <aside class="login-ink">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">cv</span>
+          <div>
+            <div class="brand-name">CVApp Pro</div>
+            <span class="brand-by">by Alejandro Montes</span>
+          </div>
+        </div>
+
+        <div>
+          <h1>Tu próxima<br />oportunidad<br /><em>empieza aquí.</em></h1>
+          <ul class="feats">
+            <li><span class="fd"></span><span>Editor en vivo con descarga en PDF al instante</span></li>
+            <li><span class="fd"></span><span>Vacantes ordenadas por afinidad con tu perfil</span></li>
+            <li><span class="fd"></span><span>Experiencia clara, enfocada en tu currículum</span></li>
+          </ul>
+        </div>
+
+        <div class="cv-card-mini" aria-hidden="true">
+          <span class="cv-card-lbl">Vista previa</span>
+          <div class="cn">María García Vega</div>
+          <div class="cr">Diseñadora UX · Buenos Aires, AR</div>
+          <div class="cdiv"></div>
+          <div class="csec">Experiencia</div>
+          <div class="crow">
+            <span class="cdot"></span>
+            <div>
+              <div class="cjob">UX Lead · Mercado Libre</div>
+              <div class="cco">2022 – presente</div>
+            </div>
+          </div>
+          <div class="crow">
+            <span class="cdot"></span>
+            <div>
+              <div class="cjob">Product Designer · BBVA</div>
+              <div class="cco">2019 – 2022</div>
+            </div>
+          </div>
+          <div class="ctags">
+            <span class="ctag">Figma</span><span class="ctag">UX Research</span>
+            <span class="ctag">Design Systems</span>
+          </div>
+          <div class="cled"><span class="cled-dot"></span>PDF listo para descargar</div>
+        </div>
+      </aside>
+
+      <div class="login-paper">
+        <div class="login-panel">
+          <h2>Acceder</h2>
+          <p id="login-subtitulo">Entra a tu cuenta o crea una nueva.</p>
+
+          <div id="login-paso-inicio" class="login-paso">
+            <div class="login-actions">
+              <button type="button" id="btn-google" class="btn-soc">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                </svg>
+                Continuar con Google
+              </button>
+              <button type="button" id="btn-microsoft" class="btn-soc">
+                <svg viewBox="0 0 21 21" aria-hidden="true">
+                  <rect x="1" y="1" width="9" height="9" fill="#F25022" />
+                  <rect x="11" y="1" width="9" height="9" fill="#7FBA00" />
+                  <rect x="1" y="11" width="9" height="9" fill="#00A4EF" />
+                  <rect x="11" y="11" width="9" height="9" fill="#FFB900" />
+                </svg>
+                Continuar con Microsoft
+              </button>
+              <button type="button" id="btn-invitado" class="btn-soc ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Explorar como invitado
+              </button>
+            </div>
+
+            <div class="login-divider" aria-hidden="true"><span>o con correo</span></div>
+
+            <form id="form-correo" class="form-grid login-form" novalidate>
+              <div class="form-row">
+                <label for="login-email">Correo electrónico</label>
+                <input
+                  id="login-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  placeholder="tu@correo.com"
+                />
+              </div>
+              <div class="login-actions login-actions-row">
+                <button type="submit" name="modo" value="ingresar" class="btn btn-primary">
+                  Ingresar
+                </button>
+                <button type="submit" name="modo" value="registrarme" class="btn btn-secondary">
+                  Registrarme
+                </button>
+              </div>
+            </form>
+            <p class="login-foot">
+              Al continuar aceptas los términos de uso.<br />
+              Tus datos nunca se comparten con terceros.
+            </p>
+          </div>
+
+          <div id="login-paso-codigo" class="login-paso hidden">
+            <p class="login-hint">
+              Enviamos un código de 6 dígitos a
+              <strong id="login-email-destino"></strong>
+            </p>
+            <form id="form-otp" class="form-grid login-form" novalidate>
+              <div class="form-row">
+                <label for="login-otp">Código de verificación</label>
+                <input
+                  id="login-otp"
+                  name="otp"
+                  inputmode="numeric"
+                  autocomplete="one-time-code"
+                  maxlength="6"
+                  pattern="[0-9]{6}"
+                  required
+                  placeholder="123456"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Verificar y entrar</button>
+            </form>
+            <div class="login-actions login-actions-row" style="margin-top: 12px">
+              <button type="button" id="btn-reenviar-otp" class="btn btn-ghost">Reenviar código</button>
+              <button type="button" id="btn-cambiar-correo" class="btn btn-ghost">Cambiar correo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App -->
+    <div id="app-shell" class="app-shell">
+      <div id="banner-invitado" class="banner-invitado hidden" role="status">
+        Modo invitado — exploras sin cuenta. Los cambios permanecen mientras la sesión esté activa.
+      </div>
+
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">cv</span>
+          <div class="brand-text">
+            <span class="brand-name">CVApp Pro</span>
+            <span class="brand-by">by Alejandro Montes</span>
+          </div>
+        </div>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#dashboard">Inicio</a>
+          <a href="#perfil">Perfil</a>
+          <a href="#cv">Currículum</a>
+          <a href="#vacantes">Vacantes</a>
+        </nav>
+        <div class="user-chip">
+          <img id="user-foto" alt="Foto de perfil" width="32" height="32" />
+          <span id="user-nombre">Usuario</span>
+          <button type="button" id="btn-logout" class="btn btn-ghost btn-sm">Salir</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <!-- Inicio -->
+        <section id="vista-dashboard" class="vista" aria-label="Inicio">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">CVApp Pro</p>
+              <h2 class="large-title">Bienvenido</h2>
+              <p class="subtitle">Construye tu CV, previsualízalo en PDF y encuentra vacantes afines.</p>
+            </div>
+          </header>
+          <div class="grid grid-dash">
+            <a class="card card-link" href="#perfil">
+              <h3>Perfil</h3>
+              <p>Tu identidad profesional alimenta el currículum y las sugerencias.</p>
+            </a>
+            <a class="card card-link" href="#cv">
+              <h3>Currículum</h3>
+              <p>Editor en vivo con vista previa y descarga en PDF.</p>
+            </a>
+            <a class="card card-link" href="#vacantes">
+              <h3>Vacantes</h3>
+              <p>Oportunidades ordenadas por afinidad con tu perfil.</p>
+            </a>
+          </div>
+        </section>
+
+        <!-- Perfil -->
+        <section id="vista-perfil" class="vista" aria-label="Perfil">
+          <header class="page-header">
+            <div>
+              <h2 class="large-title">Perfil</h2>
+              <p class="subtitle">Estos datos aparecen en tu CV y mejoran el matching de vacantes.</p>
+            </div>
+          </header>
+          <form id="form-perfil" class="card form-grid surface">
+            <input type="hidden" id="moneda" name="moneda" value="COP" />
+            <div class="grid grid-2">
+              <div class="form-row">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="nombre" required placeholder="Alex Rivera" />
+              </div>
+              <div class="form-row">
+                <label for="titulo">Título profesional</label>
+                <input id="titulo" name="titulo" placeholder="Frontend Developer" />
+              </div>
+              <div class="form-row">
+                <label for="email">Correo</label>
+                <input id="email" name="email" type="email" placeholder="correo@ejemplo.com" />
+              </div>
+              <div class="form-row">
+                <label for="ciudad">Ciudad</label>
+                <input id="ciudad" name="ciudad" placeholder="Bogotá, CO" />
+              </div>
+              <div class="form-row" style="grid-column: 1 / -1">
+                <label for="foto_url">URL de foto</label>
+                <input id="foto_url" name="foto_url" placeholder="https://..." />
+              </div>
+              <div class="form-row" style="grid-column: 1 / -1">
+                <label for="bio">Resumen profesional</label>
+                <textarea id="bio" name="bio" placeholder="Breve presentación"></textarea>
+              </div>
+              <div class="form-row">
+                <label for="disponibilidad">Disponibilidad</label>
+                <select id="disponibilidad" name="disponibilidad">
+                  <option value="inmediata">Inmediata</option>
+                  <option value="2_semanas">En 2 semanas</option>
+                  <option value="1_mes">En 1 mes</option>
+                  <option value="no_busca">No busco empleo</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="intereses">Intereses (separados por coma)</label>
+                <input id="intereses" name="intereses" placeholder="React, JavaScript, UX" />
+              </div>
+            </div>
+            <div class="inline-actions">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- CV -->
+        <section id="vista-cv" class="vista" aria-label="Currículum">
+          <header class="page-header no-print">
+            <div>
+              <h2 class="large-title">Currículum</h2>
+              <p class="subtitle">Edita con claridad. La vista previa responde al instante.</p>
+            </div>
+            <div class="inline-actions no-print">
+              <button type="button" id="btn-guardar-cv" class="btn btn-secondary">Guardar</button>
+              <button type="button" id="btn-ver-pdf" class="btn btn-primary">Ver PDF</button>
+            </div>
+          </header>
+
+          <div class="split-cv">
+            <div class="grid no-print editor-stack">
+              <div class="card surface">
+                <h3>Skills</h3>
+                <div id="lista-skills" class="chips"></div>
+                <form id="form-skill" class="inline-actions tight">
+                  <input class="input-inline" name="skill" required placeholder="Ej. JavaScript" />
+                  <button class="btn btn-secondary btn-sm" type="submit">Agregar</button>
+                </form>
+              </div>
+
+              <div class="card surface">
+                <h3>Experiencia</h3>
+                <div id="lista-experiencia" class="lista"></div>
+                <form id="form-experiencia" class="form-grid">
+                  <div class="grid grid-2">
+                    <div class="form-row">
+                      <label>Rol</label>
+                      <input name="rol" required />
+                    </div>
+                    <div class="form-row">
+                      <label>Empresa</label>
+                      <input name="empresa" required />
+                    </div>
+                    <div class="form-row">
+                      <label>Periodo</label>
+                      <input name="periodo" placeholder="2024 — Actual" required />
+                    </div>
+                    <div class="form-row">
+                      <label>Detalle</label>
+                      <input name="detalle" />
+                    </div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" type="submit">Agregar experiencia</button>
+                </form>
+              </div>
+
+              <div class="card surface">
+                <h3>Educación</h3>
+                <div id="lista-educacion" class="lista"></div>
+                <form id="form-educacion" class="form-grid">
+                  <div class="grid grid-2">
+                    <div class="form-row">
+                      <label>Título</label>
+                      <input name="titulo" required />
+                    </div>
+                    <div class="form-row">
+                      <label>Institución</label>
+                      <input name="institucion" required />
+                    </div>
+                    <div class="form-row">
+                      <label>Periodo</label>
+                      <input name="periodo" required />
+                    </div>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" type="submit">Agregar educación</button>
+                </form>
+              </div>
+
+              <div class="card surface">
+                <h3>Proyectos</h3>
+                <div id="lista-proyectos" class="lista"></div>
+                <form id="form-proyecto" class="form-grid">
+                  <div class="form-row">
+                    <label>Nombre</label>
+                    <input name="nombre" required />
+                  </div>
+                  <div class="form-row">
+                    <label>Detalle</label>
+                    <textarea name="detalle"></textarea>
+                  </div>
+                  <button class="btn btn-secondary btn-sm" type="submit">Agregar proyecto</button>
+                </form>
+              </div>
+            </div>
+
+            <aside class="preview-pane">
+              <div class="preview-toolbar no-print">
+                <h3>Vista previa</h3>
+                <button type="button" id="btn-ver-pdf-aside" class="btn btn-ghost btn-sm">Abrir PDF</button>
+              </div>
+              <div id="cv-preview" class="cv-preview" aria-live="polite"></div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Vacantes -->
+        <section id="vista-vacantes" class="vista" aria-label="Vacantes">
+          <header class="page-header">
+            <div>
+              <h2 class="large-title">Vacantes</h2>
+              <p class="subtitle">
+                Ordenadas por afinidad con tus skills, intereses y título profesional.
+              </p>
+            </div>
+          </header>
+          <div id="lista-vacantes" class="grid"></div>
+        </section>
+      </main>
+
+      <footer class="app-footer no-print">
+        <span>CVApp Pro</span>
+        <span class="dot" aria-hidden="true">·</span>
+        <span>by Alejandro Montes</span>
+      </footer>
+    </div>
+
+    <!-- Modal PDF: claridad + control del usuario (HIG) -->
+    <div id="modal-pdf" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-pdf-title">
+      <div class="modal-backdrop" data-cerrar-pdf></div>
+      <div class="modal-sheet">
+        <header class="modal-header">
+          <div>
+            <h2 id="modal-pdf-title">Vista PDF</h2>
+            <p class="subtitle">Revisa tu currículum antes de descargarlo.</p>
+          </div>
+          <div class="inline-actions">
+            <button type="button" id="btn-descargar-pdf" class="btn btn-primary">Descargar PDF</button>
+            <button type="button" class="btn btn-secondary" data-cerrar-pdf>Cerrar</button>
+          </div>
+        </header>
+        <div class="modal-body">
+          <div id="pdf-preview-content" class="cv-preview cv-preview-pdf"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
